@@ -103,9 +103,9 @@ exports.handler = async function(event, context) {
   const email = event.queryStringParameters.email
 
   if (validateEmail(email)) {
-    mailTransporter.sendMail({
+    const data = await mailTransporter.sendMail({
       from: '"Coding TV" <mail@studyroom.com.cn>',
-      to: ["liukai9293@qq.com"],
+      to: [email],
       subject: 'Coding TV Hello',
       html
     })
