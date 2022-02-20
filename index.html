@@ -15,7 +15,6 @@
   <script>
     document.getElementById("send").onclick = function () {
       const emailAddr = document.getElementById("email").value
-      console.log(emailAddr)
       fetch(`/.netlify/functions/mail?email=${emailAddr}`)
         .then(res => res.json())
         .then(console)
