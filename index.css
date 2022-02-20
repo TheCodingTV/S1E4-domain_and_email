@@ -19,6 +19,42 @@ body {
   overflow: hidden;
 }
 
+@keyframes ye {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(0, 100%);
+  }
+  50% {
+    transform: translate(100%, 100%);
+  }
+  75% {
+    transform: translate(100%, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes cy {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(0, -100%);
+  }
+  50% {
+    transform: translate(-100%, -100%);
+  }
+  75% {
+    transform: translate(-100%, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
 .content::before {
   content: '';
   position: absolute;
@@ -29,8 +65,7 @@ body {
   box-shadow: 0 0 17px 3px #ffff01, 0 0 4px 2px #ffff01;
   z-index: -1;
   border-radius: 15px;
-  animation: yellow-shadow 6s ease infinite;
-  -webkit-animation: yellow-shadow 6s ease infinite;
+  animation: ye 6s ease infinite;
 }
 
 .content::after {
@@ -43,101 +78,7 @@ body {
   box-shadow: 0 0 17px 3px #0ff, 0 0 4px 2px #0ff;
   z-index: -1;
   border-radius: 15px;
-  animation: cyan-shadow 6s ease infinite;
-  -webkit-animation: cyan-shadow 6s ease infinite;
-}
-
-@-webkit-animation yellow-shadow {
-  0% {
-    top: 0;
-    left: 0;
-  }
-  25% {
-    top: 50%;
-    left: 0;
-  }
-  50% {
-    top: 50%;
-    left: 50%;
-  }
-  75% {
-    top: 0;
-    left: 50%;
-  }
-  100% {
-    top: 0;
-    left: 0;
-  }
-}
-
-
-@keyframes yellow-shadow {
-  0% {
-    top: 0;
-    left: 0;
-  }
-  25% {
-    top: 50%;
-    left: 0;
-  }
-  50% {
-    top: 50%;
-    left: 50%;
-  }
-  75% {
-    top: 0;
-    left: 50%;
-  }
-  100% {
-    top: 0;
-    left: 0;
-  }
-}
-
-@-webkit-animation cyan-shadow {
-  0% {
-    right: 0;
-    bottom: 0;
-  }
-  25% {
-    right: 0;
-    bottom: 50%;
-  }
-  50% {
-    right: 50%;
-    bottom: 50%;
-  }
-  75% {
-    right: 50%;
-    bottom: 0;
-  }
-  100% {
-    right: 0;
-    bottom: 0;
-  }
-}
-
-@keyframes cyan-shadow {
-  0% {
-    right: 0;
-    bottom: 0;
-  }
-  25% {
-    right: 0;
-    bottom: 50%;
-  }
-  50% {
-    right: 50%;
-    bottom: 50%;
-  }
-  75% {
-    right: 50%;
-    bottom: 0;
-  }
-  100% {
-    right: 0;
-    bottom: 0;
-  }
+  animation: cy 6s ease infinite;
 }
 
 .text {
