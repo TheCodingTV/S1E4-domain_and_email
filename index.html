@@ -1,0 +1,24 @@
+<head>
+  <title>Coding TV Episode4 - Domain</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+  <div class="container">
+    <div class="content">
+      <div class="text">
+        <div class="text1">Coding TV Episode 4</div>
+        <input id="email" type="text" placeholder="Enter your email here"></input>
+        <button id="send" class="btn">Send</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.getElementById("send").onclick = function () {
+      const emailAddr = document.getElementById("email").value
+      console.log(emailAddr)
+      fetch(`/.netlify/functions/mail?email=${emailAddr}`)
+        .then(res => res.json())
+        .then(console)
+    }
+  </script>
+</body>

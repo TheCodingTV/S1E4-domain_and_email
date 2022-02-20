@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+  position: relative;
+}
+
+body {
+  margin: 0;
+  background-color: #060C1F;
+  font-family: 'Almarai', sans-serif;
+  border-radius: 5px;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.content::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 50%;
+  box-shadow: 0 0 17px 3px #ffff01, 0 0 4px 2px #ffff01;
+  z-index: -1;
+  border-radius: 15px;
+  animation: yellow-shadow 6s ease infinite;
+}
+
+.content::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  height: 50%;
+  box-shadow: 0 0 17px 3px #0ff, 0 0 4px 2px #0ff;
+  z-index: -1;
+  border-radius: 15px;
+  animation: cyan-shadow 6s ease infinite;
+}
+
+@keyframes yellow-shadow {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  25% {
+    top: 50%;
+    left: 0;
+  }
+  50% {
+    top: 50%;
+    left: 50%;
+  }
+  75% {
+    top: 0;
+    left: 50%;
+  }
+  100% {
+    top: 0;
+    left: 0;
+  }
+}
+
+@keyframes cyan-shadow {
+  0% {
+    right: 0;
+    bottom: 0;
+  }
+  25% {
+    right: 0;
+    bottom: 50%;
+  }
+  50% {
+    right: 50%;
+    bottom: 50%;
+  }
+  75% {
+    right: 50%;
+    bottom: 0;
+  }
+  100% {
+    right: 0;
+    bottom: 0;
+  }
+}
+
+.text {
+  font-size: 30px;
+  margin: 0;
+  position: relative;
+  background-color: #060C1F;
+  color: #fff;
+  padding: 60px 100px;
+  border-radius: 15px;
+}
+
+.text1 {
+  font-weight: 600;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  background: transparent;
+  border: none;
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #ddd;
+  outline: none;
+}
+input[type="text"]:focus {
+  outline: none;
+}
+
+.btn {
+  width: 160px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  height: 45px;
+  text-align:center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 50px;
+  transition: all .4s ease-in-out;
+  background-image: linear-gradient(
+    to right,
+    #29323c,
+    #485563,
+    #2b5876,
+    #4e4376
+  );
+  box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+  margin-top: 20px;
+}
+
+.btn:hover {
+  background-position: 100% 0;
+  transition: all .4s ease-in-out;
+}
+
+.btn:focus {
+  outline: none;
+}
