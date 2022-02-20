@@ -30,6 +30,7 @@ body {
   z-index: -1;
   border-radius: 15px;
   animation: yellow-shadow 6s ease infinite;
+  -webkit-animation: yellow-shadow 6s ease infinite;
 }
 
 .content::after {
@@ -43,6 +44,7 @@ body {
   z-index: -1;
   border-radius: 15px;
   animation: cyan-shadow 6s ease infinite;
+  -webkit-animation: cyan-shadow 6s ease infinite;
 }
 
 @keyframes yellow-shadow {
