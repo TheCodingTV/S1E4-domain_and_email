@@ -104,9 +104,9 @@ exports.handler = async function(event, context) {
 
   if (validateEmail(email)) {
     const data = await mailTransporter.sendMail({
-      from: '"Coding TV" <mail@studyroom.com.cn>',
+      from: `"Coding TV" <${process.env.MAIL_ADDRESS}>`,
       to: [email],
-      subject: 'Coding TV Hello',
+      subject: 'Coding TV',
       html
     })
     
